@@ -7,14 +7,11 @@
 ### Contact Information
 
 **Location**: Pskov, Russia
-
 **Phone**: +7 996 947 06 88
-
 **E-mail**: <gerygixer@gmail.com>
-
 **Telegram**: @valueldi
-
 **GitHub**: [Ueldenarmo](https://github.com/Ueldenarmo "Github")
+**Discord
 
 ----
 
@@ -40,3 +37,19 @@ Currently, I am proficient in Git, the basics of Markdown and JavaScript, and I 
 ### Code Example
 
 *coming soon*
+
+----
+
+### Work Experience
+
+*coming soon, educational process*
+
+----
+
+### Education
+
+* Courses:
+  * Purple School:
+    * Development Basics,
+    * Git Basics.
+  * RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)
