@@ -7,10 +7,15 @@ html {
 }
 
 body {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 100vh;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font: 20px/1.5 'Courier New', monospace;
+    color: #29262b;
 }
 
 .container {
@@ -18,12 +23,118 @@ body {
     margin: 0 auto;
 }
 
+.header {
+    background-color: #73687a;
+}
+
+
 .nav-list {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 0 20px;
-    line-height: 50px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0 12px;
     text-decoration: none;
+    font: 22px/50px;
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: -5px;
+    width: calc(100% - 24px);
+    height: 2px;
+    background-color: #aaa3b8;
+    opacity: 0;
+    transition: .5s;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: calc(100% - 24px);
+    }
+}
+
+.main {
+    margin-bottom: auto;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section {
+    width: calc(50% - 20px);
+    padding: 10px;
+    padding-bottom: 35px;
+    border-bottom: 2px solid #686b4b;
+}
+
+.section-profile {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px 30px 35px;
+    border-bottom: 8px solid #73687b;
+}
+
+.pre {
+    padding: 0;
+    margin: 0;
+}
+
+.section-profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.section-profile-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-title {
+    position: relative;
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 50px;
+    word-spacing: 3px;
+
+}
+
+.section-subtitle {
+    margin-top: 20px;
+    color: #5c5c5c;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
 }
