@@ -1,1 +1,1 @@
-<https://Ueldenarmo.github.io/rsschool-cv/cv>
+<https://ueldenarmo.github.io/rsschool-cv/>
