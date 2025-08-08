@@ -1,3 +1,11 @@
+:root {
+    --header-bg-color: #73687a;
+    --text-color: #29262b;
+    --link-color: aliceblue;
+    --link-hover-color: #aaa3b8;
+    --section-border-color: #686b4b;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -15,7 +23,16 @@ body {
     margin: 0;
     padding: 0;
     font: 20px/1.5 'Courier New', monospace;
-    color: #29262b;
+    color: var(--text-color);
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
 }
 
 .container {
@@ -24,9 +41,8 @@ body {
 }
 
 .header {
-    background-color: #73687a;
+    background-color: var(--header-bg-color);
 }
-
 
 .nav-list {
     display: flex;
@@ -41,7 +57,7 @@ body {
     text-decoration: none;
     font: 22px/50px;
     font-weight: 500;
-    color: aliceblue;
+    color: var(--link-color);
 }
 
 .nav-link::after {
@@ -51,7 +67,7 @@ body {
     bottom: -5px;
     width: calc(100% - 24px);
     height: 2px;
-    background-color: #aaa3b8;
+    background-color: var(--link-hover-color);
     opacity: 0;
     transition: .5s;
 }
@@ -87,7 +103,7 @@ body {
     width: calc(50% - 20px);
     padding: 10px;
     padding-bottom: 35px;
-    border-bottom: 2px solid #686b4b;
+    border-bottom: 2px solid var(--section-border-color);
 }
 
 .section-profile {
@@ -137,7 +153,7 @@ body {
     font-weight: 700;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: #73687a
+    color: var(--header-bg-color);
 }
 
 .section-subtitle {
@@ -159,12 +175,31 @@ body {
 .section-list {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 .section-item {
     position: relative;
     padding: 0;
-    padding-left: 15px;
+    padding-left: 30px;
     margin: 0;
     margin-bottom: 4px;
+    list-style: none;
+}
+
+.section-item::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+    background-image: url("assets/duotone-chevron-right-small-svgrepo-com.svg");
+}
+
+.section-item a {
+    text-decoration: none;
+    color: #aba0bd;
+    transition: color 0.5s;
 }
