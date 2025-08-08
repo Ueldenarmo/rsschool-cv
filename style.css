@@ -1,0 +1,269 @@
+:root {
+    --header-bg-color: #73687a;
+    --text-color: #29262b;
+    --link-color: aliceblue;
+    --link-hover-color: #aaa3b8;
+    --section-border-color: #686b4b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    font: 20px/1.5 'Courier New', monospace;
+    color: var(--text-color);
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: var(--header-bg-color);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0 12px;
+    text-decoration: none;
+    font: 22px/50px;
+    font-weight: 500;
+    color: var(--link-color);
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: -5px;
+    width: calc(100% - 24px);
+    height: 2px;
+    background-color: var(--link-hover-color);
+    opacity: 0;
+    transition: .5s;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    animation-name: slidein;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: calc(100% - 24px);
+    }
+}
+
+.main {
+    margin-bottom: auto;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.section {
+    width: calc(50% - 20px);
+    padding: 10px;
+    padding-bottom: 35px;
+    border-bottom: 2px solid var(--section-border-color);
+}
+
+.section-profile {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 50px 30px 35px;
+    border-bottom: 8px solid #73687b;
+}
+
+.pre {
+    padding: 0;
+    margin: 0;
+}
+
+.section-profile-photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.section-profile-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.main-title {
+    position: relative;
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    line-height: 50px;
+    word-spacing: 3px;
+}
+
+.section-title {
+    padding: 0;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--header-bg-color);
+}
+
+.section-subtitle {
+    margin-top: 20px;
+    color: #5c5c5c;
+    line-height: 50px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.section#languages {
+    border-bottom: none !important;
+}
+
+
+#summary p {
+    line-height: 1.1;
+}
+
+.section-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.section-item {
+    position: relative;
+    padding: 0;
+    padding-left: 30px;
+    margin: 0;
+    margin-bottom: 4px;
+    list-style: none;
+}
+
+.section-item::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+    background-image: url("assets/duotone-chevron-right-small-svgrepo-com.svg");
+}
+
+.section-item a {
+    text-decoration: none;
+    color: #aba0bd;
+    transition: color 0.5s;
+}
+
+.footer {
+    background-color: var(--header-bg-color);
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--link-color);
+}
+
+.github {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.rss {
+    width: 121px;
+    height: 45px;
+    background-image: url("assets/rs-school-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+    }
+
+    .section-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-education {
+        border-bottom: 1px solid var(--section-border-color);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 410px) {
+    .main-title {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
+}
