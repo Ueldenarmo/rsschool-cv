@@ -164,9 +164,10 @@ p {
     letter-spacing: 2px;
 }
 
-.section-languages {
-    border-bottom: 0;
+.section#languages {
+    border-bottom: none !important;
 }
+
 
 #summary p {
     line-height: 1.1;
@@ -202,4 +203,67 @@ p {
     text-decoration: none;
     color: #aba0bd;
     transition: color 0.5s;
+}
+
+.footer {
+    background-color: var(--header-bg-color);
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--link-color);
+}
+
+.github {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.rss {
+    width: 121px;
+    height: 45px;
+    background-image: url("assets/rs-school-logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+    }
+
+    .section-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-education {
+        border-bottom: 1px solid var(--section-border-color);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        display: none;
+    }
+}
+
+@media (max-width: 410px) {
+    .main-title {
+        font-size: 24px;
+        letter-spacing: 4px;
+    }
 }
