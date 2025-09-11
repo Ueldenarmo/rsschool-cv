@@ -120,10 +120,15 @@ p {
 }
 
 .section-profile-photo {
+    width: auto;
+    height: 200px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+.profile-photo {
     width: 200px;
     height: 200px;
-    object-fit: cover;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    object-fit: fill;
 }
 
 .section-profile-title {
