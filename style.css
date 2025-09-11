@@ -55,7 +55,7 @@ p {
     position: relative;
     padding: 0 12px;
     text-decoration: none;
-    font: 22px/50px;
+    font: 22px/50px 'Courier New', monospace;
     font-weight: 500;
     color: var(--link-color);
 }
